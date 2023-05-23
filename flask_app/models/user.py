@@ -24,8 +24,8 @@ class User:
         query = """ INSERT INTO users (first_name, last_name, email, password)
                 VALUES (%(first_name)s, %(last_name)s, %(email)s, %(password)s)"""
         result = connectToMySQL(cls.DB).query_db(query,data)
-        return result 
-    
+        return result
+        
     @classmethod
     def get_all(cls):
         query = """ SELECT * FROM users;"""
